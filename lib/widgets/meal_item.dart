@@ -21,7 +21,9 @@ class MealItem extends StatelessWidget {
 
   void _selectMealItem(BuildContext context, Meal meal) {
     final MaterialPageRoute route = MaterialPageRoute(
-      builder: (ctx) => MealDetails(title: meal.title),
+      builder: (ctx) => MealDetails(
+        meal: meal,
+      ),
     );
 
     Navigator.of(context).push(route);
